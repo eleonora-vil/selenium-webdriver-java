@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-@Test
 public class UrlPageTitleHandle {
-    public static void testUrlPageTitleHandle() {
+    @Test
+    public void testUrlPageTitleHandle() {
 
         //1. Init web-driver session
         WebDriver driver = driverFactory.getChromeDriver();

@@ -8,9 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 import java.awt.*;
-@Test
+
 public class DnDHandle {
-    public static void testDnDHandle () {
+    @Test
+    public void testDnDHandle () {
         WebDriver driver = driverFactory.getChromeDriver();
         driver.get("http://the-internet.herokuapp.com/drag_and_drop");
 

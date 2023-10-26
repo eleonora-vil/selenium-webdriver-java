@@ -11,9 +11,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
-@Test
+
 public class RightClickHandle {
-    public static void testRightClickHandle() {
+    @Test
+    public void testRightClickHandle() {
 
         //1. Init web-driver session
         WebDriver driver = driverFactory.getChromeDriver();

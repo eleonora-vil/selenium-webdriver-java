@@ -9,9 +9,9 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-@Test
 public class MouseHoverHandle {
-    public static void testMouseHoverHandle() {
+    @Test
+    public void testMouseHoverHandle() {
 
         //1. Init web-driver session
         WebDriver driver = driverFactory.getChromeDriver();

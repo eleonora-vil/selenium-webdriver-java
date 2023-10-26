@@ -4,9 +4,9 @@ import driver.driverFactory;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
-@Test
 public class LaunchBrowser {
-    public static void testLaunchBrowser() {
+    @Test
+    public void testLaunchBrowser() {
         WebDriver driver = driverFactory.getChromeDriver();
         driver.get("https://google.com");
         //Debug only
