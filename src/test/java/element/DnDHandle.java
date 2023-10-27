@@ -1,7 +1,7 @@
 package element;
 
 import driver.driverFactory;
-import element.ElementController;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -25,7 +25,7 @@ public class DnDHandle {
         } catch (AWTException e) {
             e.printStackTrace();
         }
-        //7. Quit browser session
+        // 7. Quit browser session
         driver.quit();
     }
 }
