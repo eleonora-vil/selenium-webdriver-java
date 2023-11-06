@@ -8,7 +8,7 @@ import driver.driverFactory;
 
 public class TC07 {
     @Test
-    public void Main() {
+    public void TC07() {
 
         // Create a WebDriver instance
         WebDriver driver = driverFactory.getChromeDriver();
@@ -38,6 +38,6 @@ public class TC07 {
         // LoginPage.clickSavePDF();
 
         // Close the browser
-        // driver.quit();
+        driver.quit();
     }
 }
