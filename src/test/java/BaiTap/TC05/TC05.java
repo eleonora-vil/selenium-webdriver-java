@@ -12,7 +12,7 @@ import java.util.UUID;
 
 public class TC05 {
     @Test
-    public void TC0505() {
+    public void TC05() {
 
         WebDriver driver = new ChromeDriver();
 
