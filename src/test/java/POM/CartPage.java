@@ -17,6 +17,10 @@ public class CartPage {
     private By shippingCostSelector = By.cssSelector("label[for='s_method_flatrate_flatrate'] span[class='price']");
     private By totalCostSelector = By.xpath("//span[contains(text(),'Update Total')]");
     private By totalCost = By.cssSelector("strong span[class='price']");
+    private By msg = By.xpath("//li[@class='success-msg']/ul/li/span");
+    private final By couponCodeInput = By.cssSelector("input[name='coupon_code']");
+    private final By applyCouponButton = By.cssSelector("button[value='Apply']");
+    private final By totalPrice = By.cssSelector("strong span[class='price']");
 
     public CartPage(WebDriver driver) {
         this.driver = driver;
@@ -60,5 +64,25 @@ public class CartPage {
 
     public String getTotalCost() {
         return driver.findElement(totalCost).getText();
+    }
+
+    public void enterCouponCode(String code) {
+        driver.findElement(couponCodeInput).sendKeys(code);
+    }
+
+    public void clickApplyCouponButton() {
+        driver.findElement(applyCouponButton).click();
+    }
+
+    public String getNofication() {
+        return driver.findElement(msg).getText();
+    }
+
+    public double Price() {
+        return Double.parseDouble(driver.findElement(totalPrice).getText().replace("$", ""));
+    }
+
+    public double DiscountedPrice() {
+        return Price() * 0.95;
     }
 }
