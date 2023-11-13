@@ -48,8 +48,8 @@ public class TC04 {
 
             WebElement popUpContent = driver.findElement(By.id("product_comparison"));
             String popUpText = popUpContent.getText();
-            Assert.assertTrue(popUpText.contains("SONY XPERIA"));
             Assert.assertTrue(popUpText.contains("IPhone"));
+            Assert.assertTrue(popUpText.contains("SAMSUNG GALAXY"));
 
             // 6. Close the Popup Window
             // driver.close();
